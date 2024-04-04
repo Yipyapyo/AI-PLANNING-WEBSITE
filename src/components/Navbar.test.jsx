@@ -11,10 +11,6 @@ describe("Navbar", () => {
       render(<Navbar />);
       expect(screen.getByTestId("website-name")).toHaveTextContent("| Explainable AI Planning");
     });
-    it("renders planning domain link", () => {
-      render(<Navbar />);
-      expect(screen.getByTestId("planning-domain")).toHaveTextContent("planning.domains");
-    });
     it("renders editor link", () => {
       render(<Navbar />);
       expect(screen.getByTestId("editor")).toHaveTextContent("editor.planning.domains");
@@ -22,15 +18,6 @@ describe("Navbar", () => {
     it("renders pddl-generators link", () => {
       render(<Navbar />);
       expect(screen.getByTestId("pddl-generator")).toHaveTextContent("PDDL Generators");
-    });
-    it("navigates to planning.domains", () => {
-      render(<Navbar />);
-      const planningDomainLink = screen.getByTestId("planning-domain");
-      const { location } = window;
-      delete window.location;
-      window.location = { ...location, href: "http://planning.domains/" };
-      fireEvent.click(planningDomainLink);
-      expect(window.location.href).toBe("http://planning.domains/");
     });
     it("navigates to editor.planning.domains", () => {
       render(<Navbar />);
