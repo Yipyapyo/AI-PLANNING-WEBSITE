@@ -13,130 +13,130 @@ describe("Plan", () => {
       expect(findPlanButton).toHaveTextContent("Find Plan");
       expect(findPlanButton).toBeInTheDocument();
     });
-    // it('find plan button finds plan with domain and problem files', () => {
-    //   const handleFindPlan = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} />);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   expect(handleFindPlan).toHaveBeenCalledWith(domainValue, problemValue);
-    // });
-    // it('renders loading spinner', () => {
-    //   const handleFindPlan = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   const loading = screen.getByTestId("spinner");
-    //   expect(loading).toBeInTheDocument();
-    // });
-    // it('renders plan title', async () => {
-    //   const handleFindPlan = vi.fn().mockImplementationOnce(() => "No Plan");
-    //   render(<Plan domainValue={"a"} problemValue={"a"} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const planTitle = screen.queryByTestId("plan-title");
-    //     expect(planTitle).toBeInTheDocument(); 
-    //   });
-    // });
-    // it('renders original plan', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const originalPlan = screen.queryByTestId("original-plan");
-    //     expect(originalPlan).toBeInTheDocument(); 
-    //     const plan = screen.queryByTestId("plan");
-    //     expect(plan).toBeInTheDocument(); 
-    //   });
-    // });
-    // it('renders reset button', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const resetButton = screen.queryByTestId("reset");
-    //     expect(resetButton).toBeInTheDocument(); 
-    //   });
-    // });
-    // it('reset button resets everything', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   const handleReset = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} reset={handleReset("")}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const resetButton = screen.queryByTestId("reset");
-    //     expect(resetButton).toBeInTheDocument(); 
-    //     fireEvent.click(resetButton);
-    //     expect(handleReset).toHaveBeenCalled();
-    //   });
-    // });
-    // it('renders button1', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const button1 = screen.queryByTestId("button1");
-    //     expect(button1).toBeInTheDocument(); 
-    //   });
-    // });
-    // it('button1 generates new plan with actionA and actionB', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   const handleButton1 = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} handleButton1={handleButton1(actionA, actionB)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const button1 = screen.queryByTestId("button1");
-    //     fireEvent.click(button1);
-    //     expect(handleButton1).toHaveBeenCalledWith(actionA, actionB);
-    //   });
-    // });
-    // it('renders button2', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const button2 = screen.queryByTestId("button2");
-    //     expect(button2).toBeInTheDocument(); 
-    //   });
-    // });
-    // it('button2 generates new plan with actionA and actionB', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   const handleButton2 = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} handleButton2={handleButton2(actionA, actionB)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const button2 = screen.queryByTestId("button2");
-    //     fireEvent.click(button2);
-    //     expect(handleButton2).toHaveBeenCalledWith(actionA, actionB);
-    //   });      
-    // });
-    // it('new plan generates graphs and chart', async () => {
-    //   const handleFindPlan = vi.fn();
-    //   const handleButton1 = vi.fn();
-    //   const handleButton2 = vi.fn();
-    //   render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} handleButton1={handleButton2(actionA, actionB)} handleButton2={handleButton2(actionA, actionB)}/>);
-    //   const findPlanButton = screen.getByTestId("find-plan");
-    //   fireEvent.click(findPlanButton);
-    //   await handleFindPlan(() => {
-    //     const button1 = screen.queryByTestId("button1");
-    //     fireEvent.click(button1);
-    //     expect(handleButton1).toHaveBeenCalledWith(actionA, actionB);
-    //     const graph = screen.queryByTestId("graph-viewer");
-    //     expect(graph).toBeInTheDocument(); 
-    //   });    
-    //   await handleFindPlan(() => {
-    //     const button2 = screen.queryByTestId("button2");
-    //     fireEvent.click(button2);
-    //     expect(handleButton2).toHaveBeenCalledWith(actionA, actionB);
-    //     const chart = screen.queryByTestId("chart-viewer");
-    //     expect(chart).toBeInTheDocument(); 
-    //   });      
-    // });
+    it('find plan button finds plan with domain and problem files', () => {
+      const handleFindPlan = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} />);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      expect(handleFindPlan).toHaveBeenCalledWith(domainValue, problemValue);
+    });
+    it('renders loading spinner', () => {
+      const handleFindPlan = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      const loading = screen.getByTestId("spinner");
+      expect(loading).toBeInTheDocument();
+    });
+    it('renders plan title', async () => {
+      const handleFindPlan = vi.fn().mockImplementationOnce(() => "No Plan");
+      render(<Plan domainValue={"a"} problemValue={"a"} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const planTitle = screen.queryByTestId("plan-title");
+        expect(planTitle).toBeInTheDocument(); 
+      });
+    });
+    it('renders original plan', async () => {
+      const handleFindPlan = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const originalPlan = screen.queryByTestId("original-plan");
+        expect(originalPlan).toBeInTheDocument(); 
+        const plan = screen.queryByTestId("plan");
+        expect(plan).toBeInTheDocument(); 
+      });
+    });
+    it('renders reset button', async () => {
+      const handleFindPlan = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const resetButton = screen.queryByTestId("reset");
+        expect(resetButton).toBeInTheDocument(); 
+      });
+    });
+    it('reset button resets everything', async () => {
+      const handleFindPlan = vi.fn();
+      const handleReset = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} reset={handleReset("")}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const resetButton = screen.queryByTestId("reset");
+        expect(resetButton).toBeInTheDocument(); 
+        fireEvent.click(resetButton);
+        expect(handleReset).toHaveBeenCalled();
+      });
+    });
+    it('renders button1', async () => {
+      const handleFindPlan = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const button1 = screen.queryByTestId("button1");
+        expect(button1).toBeInTheDocument(); 
+      });
+    });
+    it('button1 generates new plan with actionA and actionB', async () => {
+      const handleFindPlan = vi.fn();
+      const handleButton1 = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} handleButton1={handleButton1(actionA, actionB)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const button1 = screen.queryByTestId("button1");
+        fireEvent.click(button1);
+        expect(handleButton1).toHaveBeenCalledWith(actionA, actionB);
+      });
+    });
+    it('renders button2', async () => {
+      const handleFindPlan = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const button2 = screen.queryByTestId("button2");
+        expect(button2).toBeInTheDocument(); 
+      });
+    });
+    it('button2 generates new plan with actionA and actionB', async () => {
+      const handleFindPlan = vi.fn();
+      const handleButton2 = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} handleButton2={handleButton2(actionA, actionB)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const button2 = screen.queryByTestId("button2");
+        fireEvent.click(button2);
+        expect(handleButton2).toHaveBeenCalledWith(actionA, actionB);
+      });      
+    });
+    it('new plan generates graphs and chart', async () => {
+      const handleFindPlan = vi.fn();
+      const handleButton1 = vi.fn();
+      const handleButton2 = vi.fn();
+      render(<Plan domainValue={domainValue} problemValue={problemValue} handleFindPlan={handleFindPlan(domainValue, problemValue)} handleButton1={handleButton2(actionA, actionB)} handleButton2={handleButton2(actionA, actionB)}/>);
+      const findPlanButton = screen.getByTestId("find-plan");
+      fireEvent.click(findPlanButton);
+      await handleFindPlan(() => {
+        const button1 = screen.queryByTestId("button1");
+        fireEvent.click(button1);
+        expect(handleButton1).toHaveBeenCalledWith(actionA, actionB);
+        const graph = screen.queryByTestId("graph-viewer");
+        expect(graph).toBeInTheDocument(); 
+      });    
+      await handleFindPlan(() => {
+        const button2 = screen.queryByTestId("button2");
+        fireEvent.click(button2);
+        expect(handleButton2).toHaveBeenCalledWith(actionA, actionB);
+        const chart = screen.queryByTestId("chart-viewer");
+        expect(chart).toBeInTheDocument(); 
+      });      
+    });
 });
