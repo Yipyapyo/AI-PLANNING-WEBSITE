@@ -71,45 +71,38 @@ B.4 Getting Started
 2. Open the Explainable AI Planning software in a code editor e.g. VSCode, or open the
    folder in terminal
 3. Open a new terminal, skip this step if folder is open in a terminal
-4. Run ‘npm run dev’
+4. Run 'npm install' to install the dependencies and then ‘npm run dev’
 5. Click on the link shown in the terminal output, or type in ‘o’ and press enter to open the
    website in the browser
+
    B.5 Generating Plans
+
    The bar located at the top of the page contains two links which are useful for finding samples
    of domain and problem files previously used in the International Planning Competitions. The
    domain and problem section are labelled respectively with a large text area for user input.
    Below are save buttons which saves the user input. Upon clicking this, the input is displayed
    and an edit button will replace them to allow you modify the input.
-   Figure 24: Links to External Websites
-   Figure 25: Empty Input
-   55
-   Figure 26: Domain and Problem Example Inputs
-   56
+
    The find plan button is situated at the bottom right of the website and will only generate
    a plan if valid domain and problem files are posted.
-   Figure 27: Find Plan Button
+
    The plan is displayed beneath the problem section consisting of the time taken and each
    individual steps to reach the goal.
-   Figure 28: Plan Generated
+
    Underneath the plan consists of three buttons. The reset button will remove the plan
    allowing the user to regenerate the plan. The remaining two buttons are queries about the
    original plan.
-   Figure 29: Buttons
+
    Interacting with these two buttons will prompt an input box to appear where you can type
    in your action A and B.
-   57
-   Figure 30: Dialog Box Prompt
+
    After inputting these actions, a new plan is generated depending on the question asked and
    any differences are highlighted in red.
-   Figure 31: New Plan alongside Original Plan
-   Figure 32: Directed Graph
-   The plan visualisations are displayed below the plan comparison, a directed graph is generated with the original plan in sky blue and the new plan in a light red colour. You can zoom in
-   58
-   and out of this graph using the mouse wheel, and drag the nodes around by clicking on them.
+
+   The plan visualisations are displayed below the plan comparison, a directed graph is generated with the original plan in sky blue and the new plan in a light red colour. You can zoom in and out of this graph using the mouse wheel, and drag the nodes around by clicking on them.
    Dragging the screen will move across the graph.
-   Figure 33: Bar Charts
+
    The final feature of the website is the bar chart. It plots the actions against the state number.
    The original plan is in blue and the new plan is in red. Clicking on the key will remove that
    plan from view. Hovering over the specific bar will show a box with the information regarding
    the bar.
-   Figure 34: Bar Chart of a Single Plan
