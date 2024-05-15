@@ -542,7 +542,7 @@ function Plan( {domainValue, problemValue} ) {
       const supportedContent = checkDomainValidity(domText);
       if ((supportedContent) == true) {
         // Send job request to solve endpoint
-        fetch("http://localhost:5001/package/optic/solve", {
+        fetch("http://18.170.230.213:5001/package/optic/solve", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
         body: JSON.stringify(reqBody)}).then(response => response.json()).then(solveRequestUrl => {
@@ -551,7 +551,7 @@ function Plan( {domainValue, problemValue} ) {
 
         // Query the result every 0.5 seconds while the job is executing
           const queryResult = () => {
-          fetch('http://localhost:5001' + solveRequestUrl.result).then(response => response.json()).then(result => {status = result.status || "";
+          fetch('http://18.170.230.213:5001' + solveRequestUrl.result).then(response => response.json()).then(result => {status = result.status || "";
             if (status === 'PENDING') {
               setTimeout(queryResult, 500);
             } 
